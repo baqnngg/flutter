@@ -127,7 +127,7 @@ class _TodoPageState extends State<TodoPage> {
                             onChanged: (value) => _togleDone(index, value),
                         ),
                         title: Text(
-                            todo['text'],
+                          todo['text'],
                           style: TextStyle(
                             fontSize: 18,
                             decoration: todo['done']
