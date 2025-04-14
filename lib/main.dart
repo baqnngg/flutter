@@ -6,6 +6,7 @@ import 'package:hello/layout_page.dart';
 import 'package:hello/popup_page.dart';
 import 'package:hello/setting_page.dart';
 import 'package:hello/list_page.dart';
+import 'package:hello/ToDoPage.dart';
 
 import 'drawer.dart';
 import 'input_page.dart';
@@ -34,7 +35,8 @@ class MyApp extends StatelessWidget {
         '/image': (context) => const ImagePage(),
         '/button': (context) => const ButtonPage(),
         '/input': (context) => const InputPage(),
-        "/list" : (context) => const ListPage()
+        "/list" : (context) => const ListPage(),
+        "/to-do" : (context) => const TodoPage(),
       },
     );
   }
