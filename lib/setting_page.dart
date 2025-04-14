@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:first/drawer.dart';
+import 'package:hello/drawer.dart';
 
 class SettingPage extends StatelessWidget {
   const SettingPage({super.key});
@@ -12,7 +12,7 @@ class SettingPage extends StatelessWidget {
       ),
       drawer: const MyDrawer(),
       body: const Center(
-        child: Text("설정 이미지"),
+        child: Text("설정 페이지"),
       ),
     );
   }

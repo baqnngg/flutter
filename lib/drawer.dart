@@ -11,71 +11,78 @@ class MyDrawer extends StatelessWidget {
         children: [
           const DrawerHeader(
             decoration: BoxDecoration(
-                color: Colors.deepPurple
+              color: Colors.deepPurple
             ),
             child: Text(
-                '메뉴',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24
-                )
+              '메뉴',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 24
+              ),
             ),
           ),
           ListTile(
-              leading: const Icon(Icons.home),
-              title: const Text('홈'),
-              onTap: () {
-                Navigator.pushNamedAndRemoveUntil(
-                    context, "/", (route) => false
-                );
-              }
-          ),
-
-          ListTile(
-              leading: const Icon(Icons.settings),
-              title: const Text('설정'),
-              onTap: () {
-                Navigator.pushNamed(
-                    context, "/setting"
-                );
-              }
+            leading: const Icon(Icons.home),
+            title: const Text("홈"),
+            onTap: () {
+              Navigator.pushNamedAndRemoveUntil(
+                  context, "/", (route) => false
+              );
+            },
           ),
           ListTile(
-              leading: const Icon(Icons.info),
-              title: const Text('popup page'),
-              onTap: () {
-                Navigator.pushNamed(
-                    context, "/popup"
-                );
-              }
-          ),
-
-          ListTile(
-              leading: const Icon(Icons.display_settings),
-              title: const Text('Flex 예제'),
-              onTap: () {
-                Navigator.pushNamed(
-                    context, "/flex"
-                );
-              }
+            leading: const Icon(Icons.settings),
+            title: const Text("설정"),
+            onTap: () {
+              Navigator.pushNamed(
+                  context, "/setting"
+              );
+            },
           ),
           ListTile(
-              leading: const Icon(Icons.image),
-              title: const Text('image 예제'),
-              onTap: () {
-                Navigator.pushNamed(
-                    context, "/image"
-                );
-              }
+            leading: const Icon(Icons.info),
+            title: const Text("팝업 테스트"),
+            onTap: () {
+              Navigator.pushNamed(
+                  context, "/popup"
+              );
+            },
           ),
           ListTile(
-              leading: const Icon(Icons.elevator),
-              title: const Text('button 예제'),
-              onTap: () {
-                Navigator.pushNamed(
-                    context, "/button"
-                );
-              }
+            leading: const Icon(Icons.display_settings),
+            title: const Text("Flex 예제"),
+            onTap: () {
+              Navigator.pushNamed(
+                  context, "/flex"
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.image),
+            title: const Text("Image 예제"),
+            onTap: () {
+              Navigator.pushNamed(
+                  context, "/image"
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.ads_click),
+            title: const Text("Button 예제"),
+            onTap: () {
+              Navigator.pushNamed(
+                  context, "/button"
+              );
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.ads_click),
+            title: const Text("Input 예제"),
+            onTap: () {
+              Navigator.pushNamed(
+                  context, "/input"
+              );
+            },
           ),
           ListTile(
               leading: const Icon(Icons.list),
@@ -86,9 +93,6 @@ class MyDrawer extends StatelessWidget {
                 );
               }
           ),
-
-
-
         ],
       ),
     );

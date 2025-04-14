@@ -1,12 +1,14 @@
-import 'package:first/button_page.dart';
-import 'package:first/drawer.dart';
-import 'package:first/flex_page.dart';
-import 'package:first/image_page.dart';
-import 'package:first/layout_page.dart';
-import 'package:first/list_page.dart';
-import 'package:first/popup_page.dart';
-import 'package:first/setting_page_dart.dart';
 import 'package:flutter/material.dart';
+import 'package:hello/button_page.dart';
+import 'package:hello/flex_page.dart';
+import 'package:hello/image_page.dart';
+import 'package:hello/layout_page.dart';
+import 'package:hello/popup_page.dart';
+import 'package:hello/setting_page.dart';
+import 'package:hello/list_page.dart';
+
+import 'drawer.dart';
+import 'input_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,16 +27,22 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: "/",
       routes: {
-        "/": (context) => const LayoutPage(),
-        "/setting": (context) => const SettingPage(),
-        "/popup": (context) => const PopupPage(),
-        "/flex": (context) => const FlexPage(),
-        "/image": (context) => const imagePage(),
-        "/button": (context) => const ButtonPage(),
+        '/': (context) => const LayoutPage(),
+        '/setting': (context) => const SettingPage(),
+        '/popup': (context) => const PopupPage(),
+        '/flex': (context) => const FlexPage(),
+        '/image': (context) => const ImagePage(),
+        '/button': (context) => const ButtonPage(),
+        '/input': (context) => const InputPage(),
         "/list" : (context) => const ListPage()
       },
     );
   }
 }
+
+
+
+
+
 
 

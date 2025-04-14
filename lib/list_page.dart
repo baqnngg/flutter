@@ -94,37 +94,37 @@ class _ListPageState extends State<ListPage> {
                         final TextEditingController _editcontroller = TextEditingController();
 
                         showDialog(
-                          context: context,
-                          builder: (context) {
-                            return AlertDialog(
-                              title: const Text("아이템수정"),
-                              content: TextField(
-                                controller: _editcontroller,
-                                decoration: const InputDecoration(
-                                  hintText: "새로운 이름 입력"
+                            context: context,
+                            builder: (context) {
+                              return AlertDialog(
+                                title: const Text("아이템수정"),
+                                content: TextField(
+                                  controller: _editcontroller,
+                                  decoration: const InputDecoration(
+                                      hintText: "새로운 이름 입력"
+                                  ),
                                 ),
-                              ),
-                              actions: [
-                                TextButton(
-                                  onPressed: () => Navigator.pop(context),
-                                  child: const Text("취소"),
-                                ),
-                                TextButton(
-                                  onPressed: () {
-                                    final newText = _editcontroller.text.trim();
-                                    if (newText.isNotEmpty) {
-                                      setState(() {
-                                        fruits[index] = newText;
-                                      });
-                                      _saveFruits();
-                                    }
-                                    Navigator.pop(context);
-                                  },
-                                  child: const Text("저장"),
-                                )
-                              ],
-                            );
-                          }
+                                actions: [
+                                  TextButton(
+                                    onPressed: () => Navigator.pop(context),
+                                    child: const Text("취소"),
+                                  ),
+                                  TextButton(
+                                    onPressed: () {
+                                      final newText = _editcontroller.text.trim();
+                                      if (newText.isNotEmpty) {
+                                        setState(() {
+                                          fruits[index] = newText;
+                                        });
+                                        _saveFruits();
+                                      }
+                                      Navigator.pop(context);
+                                    },
+                                    child: const Text("저장"),
+                                  )
+                                ],
+                              );
+                            }
                         );
                         ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(content: Text('${fruits[index]}를 선택했어요!'))
@@ -137,7 +137,7 @@ class _ListPageState extends State<ListPage> {
                         });
 
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                          content: Text('$deletedItem를 삭제함!')
+                            content: Text('$deletedItem를 삭제함!')
                         ));
                       },
                     );
