@@ -1,6 +1,6 @@
 {
-    "name": "hello",
-    "short_name": "hello",
+    "name": "first",
+    "short_name": "first",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

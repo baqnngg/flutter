@@ -1,7 +1,12 @@
+import 'package:first/button_page.dart';
+import 'package:first/drawer.dart';
+import 'package:first/flex_page.dart';
+import 'package:first/image_page.dart';
+import 'package:first/layout_page.dart';
+import 'package:first/list_page.dart';
+import 'package:first/popup_page.dart';
+import 'package:first/setting_page_dart.dart';
 import 'package:flutter/material.dart';
-
-import 'package:hello/setting_page.dart';
-import 'drawer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,73 +19,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'GPT동아리',
+      title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      initialRoute: "/", // 처음 실행되는 경로
+      initialRoute: "/",
       routes: {
-        "/":(context) => const MyHomePage(),
-        "/setting":(context) => const SettingPage()
+        "/": (context) => const LayoutPage(),
+        "/setting": (context) => const SettingPage(),
+        "/popup": (context) => const PopupPage(),
+        "/flex": (context) => const FlexPage(),
+        "/image": (context) => const imagePage(),
+        "/button": (context) => const ButtonPage(),
+        "/list" : (context) => const ListPage()
       },
     );
   }
 }
 
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("안녕하세요"),
-      ),
-      drawer: const MyDrawer(),
-      body: Container(
-        alignment: Alignment.center,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: MediaQuery.of(context).size.width / 2,
-                  height: 200,
-                  color: Colors.blue,
-                ),
-                Container(
-                  width: MediaQuery.of(context).size.width / 2,
-                  height: 200,
-                  color: Colors.red,
-                )
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: MediaQuery.of(context).size.width / 2,
-                  height: 200,
-                  color: Colors.green,
-                ),
-                Container(
-                  width: MediaQuery.of(context).size.width / 2,
-                  height: 200,
-                  color: Colors.yellow,
-                )
-              ],
-            )
-          ],
-        ),
-      ),
-    );
-  }
-}
