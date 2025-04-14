@@ -55,9 +55,27 @@ class _TodoPageState extends State<TodoPage> {
                       foregroundColor: Colors.white
                     ),
                     child: const Text("추가")
-                )
+                ),
               ],
             ),
+          ),
+          Expanded(
+              child: todos.isEmpty
+                  ? const Center(child: Text("할 일이 없습니다."))
+                  : ListView.builder(
+                  itemCount: todos.length,
+                  itemBuilder: (context, index){
+                    return Card(
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 4
+                      ),
+                      child: ListTile(
+                        title: Text(todos[index]),
+                      ),
+                    );
+                  }
+              )
           )
         ],
       ),
